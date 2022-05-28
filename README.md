@@ -10,9 +10,15 @@ A website for exploring various eateries of Delhi. This site recommends cafes an
 ### Compatible Devices
 Laptops, desktops, Tablet PCs and Mobile Phones
 ### Built With
+#### Website:
 * Front-end: HTML, CSS, Bootstrap, Javascript
-* Backend: Node.js, Express.js, Python
+* Backend: Node.js, Express.js
 * Database: mysql
+#### Recommendation Engine and Ranking System:
+* Python
+#### Datasets
+* Images: Python using Google Image Scraper
+* Delhi_Restaurants: 
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
