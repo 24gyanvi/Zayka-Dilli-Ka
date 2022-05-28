@@ -18,7 +18,7 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 * Python
 #### Datasets
 * Images: Python using Google Image Scraper
-* DelhiNCR_Restaurants: From [https://www.kaggle.com/datasets/aestheteaman01/zomato-restaurants-in-delhi-ncr](Kaggle)
+* DelhiNCR_Restaurants: From [Kaggle](https://www.kaggle.com/datasets/aestheteaman01/zomato-restaurants-in-delhi-ncr)
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
