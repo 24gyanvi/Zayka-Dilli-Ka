@@ -7,6 +7,12 @@ A website for exploring various eateries of Delhi. This site recommends cafes an
 * The recommend page gives various salient details about the eatery chosen and also redirects to the zomato page of that eatery so that one can order or book a dine-in.
 * The recommend page shows the information about the particular eatery chosen and also shows some similar results on the basis of the chosen eatery's category which includes cuisines and its type, locality, special food items and the kind of ambience.
 * The search page shows the results on the basis of the keyword searched, basically it helps finding a type of restaurant, or eateries famous for a particular cuisine or food item.
+### Compatible Devices
+Laptops, desktops, Tablet PCs and Mobile Phones
+### Built With
+* Front-end: HTML, CSS, Bootstrap, Javascript
+* Backend: Node.js, Express.js, Python
+* Database: mysql
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
