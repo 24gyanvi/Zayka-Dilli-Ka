@@ -18,7 +18,7 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 * Python
 #### Datasets
 * Images: Python using Google Image Scraper
-* Delhi_Restaurants: 
+* DelhiNCR_Restaurants: 
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
