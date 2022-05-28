@@ -435,6 +435,7 @@ footer{
   color: #fff;
 }
 
+
 .footer-content{
   display: flex;
   justify-content: center;
@@ -456,6 +457,32 @@ footer{
   line-height: 28px;
   font-size: 14px;
   
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.socials a i{
+  font-size: 1.5rem;
+  transition: color .4s ease;
+}
+
+.socials a:hover i{
+  color: aqua;
 }
 
 footer.bottom{

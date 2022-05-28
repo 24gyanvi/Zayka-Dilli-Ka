@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <title>Index</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" href="https://user-images.githubusercontent.com/88244007/170831448-a7f1fde6-2da4-47b9-a253-9a95b32c7d7c.png">
 </head>
 <body>
   
@@ -69,9 +69,8 @@
                       
                     for val, index in ranks
                       if index < 10
-                        <div class="mySlides ">
-                          
-                          <img src="#{val.link}" class="showcase" style="width: 40vw; height: 60vh;"/>
+                        <div class="mySlides ">                          
+                          <a href="/recommend/#{val.id}"><img src="#{val.link}" class="showcase" style="width: 40vw; height: 60vh;"/></a>
                           <div class="numbertext"> Rank #{index+1}</div>
                           <div class="text">#{val.restaurant_name}</div>
                         </div>
@@ -216,8 +215,13 @@
       <footer>
         <div class="footer-content">
           <h3>Zayka दिल्ली Ka</h3>
-          <p>This website is made for the purpose of recommendation of restaurants</p>          
-        </div>
+          <p>This website is made for the purpose of recommendation of restaurants</p>
+          <ul class="socials">
+            <li><a href="mailto:gyanvi2001@gmail.com"><img src="https://user-images.githubusercontent.com/88244007/170833496-1dfe6f8f-a1e0-4fcc-85f9-68aa7b52d538.png" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/gyanvi24/"><img src="https://user-images.githubusercontent.com/88244007/170835085-ad843d00-4f9c-497c-8d5f-3c7eff9d57a4.png" alt="" class="li"></a></li>
+            <li><a href="https://github.com/24gyanvi"><img src="https://user-images.githubusercontent.com/88244007/170835025-abb4024f-100e-46b9-8fd6-beed2e085424.png" alt="" class="github"></a></li>
+          </ul>          
+        </div>        
         <footer class="bottom">
           <p>Copyright &copy; 2022 Zayka दिल्ली Ka designed by <span>Gyanvi</span></p>
         </footer>
