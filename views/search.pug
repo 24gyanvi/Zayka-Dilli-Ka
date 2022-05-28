@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Search</title>
+</head>
+<body>
+  <div class ="container-fluid navbar-style py-2">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">  
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Zayka दिल्ली Ka</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/">Home</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" action="/search" method="POST">
+                          <input class="form-control me-2" type="search" name="searchbox" placeholder="Search" aria-label="searchbox" required>              
+                          <button class="btn btn-outline-success" type="submit">Search</button>                           
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+  </div>
+  <div class ="container" id="cafe">
+    <div class="row">
+      <h2 class="subheaders" >SEARCH RESULTS</h2>
+      <p>Here Are A Few <span class="bold-style">Results</span> Based On Your Search:</p>
+    </div>
+  </div> 
+    
+  <ul class="cards">
+    for val,index in search_result
+      <!-- if index < 25  -->
+      <li>
+        <a href="/recommend/#{val.id}" class="card">
+          <img src="#{val.link}" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+              <img class="card__thumb" src="#{val.link}" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">#{val.restaurant_name}</h3>            
+                <span class="card__status">Rating: #{val.dining_rating}</span>
+              </div>
+            </div>
+            <p class="card__description">#{val.known_for2}</p>  
+          </div>
+        </a>      
+      </li> 
+    end
+  </ul>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Zayka दिल्ली Ka</h3>
+      <p>This website is made for the purpose of recommendation of restaurants</p>          
+    </div>
+    <footer class="bottom">
+      <p>Copyright &copy; 2022 Zayka दिल्ली Ka designed by <span>Gyanvi</span></p>
+    </footer>
+  </footer>
+
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

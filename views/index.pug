@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Index</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+  
+  <div class ="container-fluid navbar-style py-2">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Zayka दिल्ली Ka</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#cafe">Cafe</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#restaurant">Restaurant</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#romantic_outing">Romatic Outing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#family_outing">Family Outing</a>
+                </li>
+              </ul>
+              <form class="d-flex" action="/search" method="POST">
+                <input class="form-control me-2" type="search" name="searchbox" placeholder="Search" aria-label="searchbox" required>              
+                <button class="btn btn-outline-success" type="submit">Search</button>                           
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+      <div class ="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+
+            <div class="row">
+              <div class="col-md-6 col-12 hero-text order-md-0 order-0">
+                <h1>WE WILL HELP YOU TO</h1>
+                <h1>FIND THE BEST EATERY</h1>
+                <p>Here Are Some <span class="bold-style">Restaurants Of Delhi✌</span> </p>
+              </div>
+            
+
+            
+              <div class="col-md-6 col-12 hero-text order-md-1 order-1"> 
+                
+                  <figure>
+                    <div class="slideshow-container">                      
+                      
+                    for val, index in ranks
+                      if index < 10
+                        <div class="mySlides ">
+                          
+                          <img src="#{val.link}" class="showcase" style="width: 40vw; height: 60vh;"/>
+                          <div class="numbertext"> Rank #{index+1}</div>
+                          <div class="text">#{val.restaurant_name}</div>
+                        </div>
+                      end
+                    end
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                     
+                    <div style="text-align:center">
+                      for val,index in ranks
+                        if index < 10
+                          <span class="dot" onclick="currentSlide(`#{index}`)"></span>
+                        end
+                      end                      
+                    </div>
+                  </figure> 
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class ="container" id="cafe">
+        <div class="row">
+          <h2 class="subheaders" >CAFE</h2>
+          <p>Here Are Few <span class="bold-style">Famous Cafe</span> Of Delhi:</p>
+        </div>
+      </div> 
+        
+      <ul class="cards">
+        for val, index in cafe
+          if index < 4
+            <li>
+              <a href="/recommend/#{val.id}" class="card">
+                <img src="#{val.link}" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="#{val.link}" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">#{val.restaurant_name}</h3>            
+                      <span class="card__status">Rating: #{val.dining_rating}</span>
+                    </div>
+                  </div>
+                  <p class="card__description">#{val.known_for2}</p>
+                </div>
+              </a>      
+            </li>
+        end        
+      </ul>
+
+
+      <div class ="container" id="restaurant">
+        <div class="row">
+          <h2 class="subheaders" >RESTAURANTS</h2>
+          <p>Here Are Few <span class="bold-style">Famous Restaurants</span> Of Delhi:</p>
+        </div>
+      </div>        
+        <ul class="cards">
+          for val, index in rest
+            if index < 4
+              <li>
+                <a href="/recommend/#{val.id}" class="card">
+                  <img src="#{val.link}" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="#{val.link}" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">#{val.restaurant_name}</h3>            
+                        <span class="card__status">Rating: #{val.dining_rating}</span>
+                      </div>
+                    </div>
+                    <p class="card__description">#{val.known_for2}</p>
+                  </div>
+                </a>      
+              </li>
+          end        
+        </ul>
+      <div class ="container" id="romantic_outing">
+        <div class="row">
+          <h2 class="subheaders" >ROMANTIC OUTINGS</h2>
+          <p>Here Are Few <span class="bold-style">Famous Romantic Outings</span> Of Delhi:</p>
+        </div>
+      </div>
+        
+      <ul class="cards">
+        for val, index in rom
+          if index < 4
+            <li>
+              <a href="/recommend/#{val.id}" class="card">
+                <img src="#{val.link}" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="#{val.link}" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">#{val.restaurant_name}</h3>            
+                      <span class="card__status">Rating: #{val.dining_rating}</span>
+                    </div>
+                  </div>
+                  <p class="card__description">#{val.known_for2}</p>
+                </div>
+              </a>      
+            </li>
+        end            
+      </ul>
+
+
+      <div class ="container" id="family_outing">
+        <div class="row">
+          <h2 class="subheaders" >FAMILY OUTINGS</h2>
+          <p>Here Are Few <span class="bold-style">Famous Family Outings</span> Of Delhi:</p>
+        </div>
+      </div>
+        
+      <ul class="cards">
+        for val, index in fam
+          if index < 4
+            <li>
+              <a href="/recommend/#{val.id}" class="card">
+                <img src="#{val.link}" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="#{val.link}" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">#{val.restaurant_name}</h3>            
+                      <span class="card__status">Rating: #{val.dining_rating}</span>
+                    </div>
+                  </div> 
+                  <p class="card__description">#{val.known_for2}</p>
+                </div>
+              </a>      
+            </li>
+        end    
+      </ul>
+
+      <footer>
+        <div class="footer-content">
+          <h3>Zayka दिल्ली Ka</h3>
+          <p>This website is made for the purpose of recommendation of restaurants</p>          
+        </div>
+        <footer class="bottom">
+          <p>Copyright &copy; 2022 Zayka दिल्ली Ka designed by <span>Gyanvi</span></p>
+        </footer>
+      </footer>
+
+              
+
+  <script src="../jq/jquery.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.js" type="text/javascript"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>

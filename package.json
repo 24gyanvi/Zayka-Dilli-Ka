@@ -1,0 +1,20 @@
+{
+  "name": "expresstrial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,pug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.18.1",
+    "jquery": "^3.6.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2"
+  }
+}
