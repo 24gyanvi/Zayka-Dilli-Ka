@@ -7,3 +7,4 @@ A website for recommending cafes and restaurants of delhi based on real world da
 4. Then start the server by `npm run dev`
 
 ## Snippets
+### Front Page showing a few top restaurants of Delhi based on rating and number of people who rated
