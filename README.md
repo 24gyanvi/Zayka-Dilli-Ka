@@ -12,6 +12,7 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 ### Built With
 #### Website:
 * Front-end: HTML, CSS, Bootstrap, Javascript
+* View Engine: Pug
 * Backend: Node.js, Express.js
 * Database: mysql
 #### Recommendation Engine and Ranking System:
@@ -19,6 +20,8 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 #### Datasets
 * Images: Python using Google Image Scraper
 * DelhiNCR_Restaurants: From [Kaggle](https://www.kaggle.com/datasets/aestheteaman01/zomato-restaurants-in-delhi-ncr)
+* Ranking_lcfa: After calculating score based on rating and number of people who rated
+* lcfa_rest: After data preprocessing in Python
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
