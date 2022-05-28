@@ -1,5 +1,12 @@
 # Zayka-Dilli-Ka
-A website for recommending cafes and restaurants of delhi based on real world data.
+## About the project
+A website for exploring various eateries of Delhi. This site recommends cafes and restaurants of delhi based on real world data.
+### Salient Features
+* The front page shows eateries based on the ranking algorithm which is a combined score of both the rating and the number of people who participated in the rating so as to get an unbiased rank.
+* The front page also shows a few cafes, restaurants, romantic outings and family outings eateries based on their category and ambience sorted on the basis of its ratings.
+* The recommend page gives various salient details about the eatery chosen and also redirects to the zomato page of that eatery so that one can order or book a dine-in.
+* The recommend page shows the information about the particular eatery chosen and also shows some similar results on the basis of the chosen eatery's category which includes cuisines and its type, locality, special food items and the kind of ambience.
+* The search page shows the results on the basis of the keyword searched, basically it helps finding a type of restaurant, or eateries famous for a particular cuisine or food item.
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
