@@ -5,7 +5,7 @@ A website for exploring various eateries of Delhi. This site recommends cafes an
 * Collaborative
 * Content-based
 * Demographic
-<br>In this project, I am making use of `content-based filtering`.
+<br>In this project, I am making use of `content-based filtering`. It basically calculates the similarity score between two restaurants.
 ### Salient Features
 * The front page shows eateries based on the ranking algorithm which is a combined score of both the rating and the number of people who participated in the rating so as to get an unbiased rank.
 * The front page also shows a few cafes, restaurants, romantic outings and family outings eateries based on their category and ambience sorted on the basis of its ratings.
@@ -51,7 +51,7 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 ## Implementation
 * Ranking System: This system basically works on the dining rating and dining rating count, so as to get an unbiased ranking for restaurants. Consider an example of restaurant A and B, which have dining rating 5 and 4.9 with dining rating count as 5 and 50 respectively. So if we consider only rating then restaurant A would be ranked first while restaurant B is better, so therefore accomodating both the dining rating and dining rating count helps us overcome this problem.
 We have done this task using the formula given in [Ranking Generator](https://github.com/24gyanvi/Zayka-Dilli-Ka/blob/main/models/Ranking_generator.ipynb)
-* Recommendation Engine: This system recommends restaurants on the basis of their locality, cuisines, famous food items, their ambience and their ctegory. This is done using `bag of words` and `cosine similarity`. 
+* Recommendation Engine: This system recommends restaurants on the basis of their locality, cuisines, famous food items, their ambience and their ctegory. This is done using `bag of words` and `cosine similarity`. It basically calculates the similarity score between two restaurants.
 
 ## Future Scope
 * To sort the recommendations list on the basis of rating/pricing for 2/ distance.
