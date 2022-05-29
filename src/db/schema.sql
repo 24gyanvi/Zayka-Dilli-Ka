@@ -1,7 +1,10 @@
+-- Creating a daaabase schema
 Create database restaurants;
 
+-- Using the database
 use restaurants;
 
+-- Creating a table lcfa_rest
 create table lcfa_rest(
  id int unique not null,
  old_id int primary key not null,
@@ -16,6 +19,7 @@ create table lcfa_rest(
  known_for22 varchar(5000) 
  );
 
+-- Creating a table lcfa_ranking
 create table lcfa_ranking(
  id int primary key auto_increment not null,
  restaurant_name varchar(150) not null,
@@ -31,13 +35,15 @@ create table lcfa_ranking(
  foreign key(id) references lcfa_rest(old_id)
 );
 
-
+-- Creating a table images
 create table images(
 id int primary key not null,
 link varchar(2000),
 foreign key(id) references lcfa_rest(id)
 );
 
+
+-- Creating a table lcfa
 create table lcfa(
 id int unique not null,
  old_id int primary key not null,
@@ -53,7 +59,7 @@ id int unique not null,
  link varchar(2000)
 );
 
-
+-- Creating a table ranking
 create table ranking(
 id int unique not null,
  old_id int primary key not null,

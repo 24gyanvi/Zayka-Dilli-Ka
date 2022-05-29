@@ -1,5 +1,7 @@
 use restaurants;
 
+
+-- Insert queries for lcfa_rest table
 INSERT INTO lcfa_rest(id,old_id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22) VALUES (0,1,'Cafe Lota','Cafe, South Indian, North Indian, Beverages',1200,' Pragati Maidan, New Delhi',4.9,3748,'https://www.zomato.com/ncr/cafe-lota-pragati-maidan-new-delhi','Pondicherry Fish Curry, Coconut Rabdi, Sabudana Pop Corn, Chicken Pasanda, Majestic Chicken, Bhapa Doi','Artistic Decor, The Service, Natural Ambience, Fusion Menu, Serene Ambience, Fusion Food');
 INSERT INTO lcfa_rest(id,old_id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22) VALUES (1,3,'Burma Burma','Asian, Burmese, Bubble Tea, Desserts, Salad',1600,' Cyber Hub, DLF Cyber City, Gurgaon',4.9,2636,'https://www.zomato.com/ncr/burma-burma-dlf-cyber-city','Coconut Milk Dessert, Honey Caviar, Kaffir Lime Cooler, Samosa Curry, Samosa Soup, Corn Curry','Knowledgeable Staff, Authentic, Soothing Ambience, Dessert Menu, Pure Veg, Cozy');
 INSERT INTO lcfa_rest(id,old_id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22) VALUES (2,4,'The Big Chill','Continental, American, Italian',1500,' Khan Market, New Delhi',4.9,6487,'https://www.zomato.com/ncr/the-big-chill-khan-market-new-delhi','Irish Cream Tiramisu, Penne Vodka, Mississippi Mudpie, Iced Tea Pitcher, Tuna Melt, Banofi Pie','Retro Ambience, Yummy Desserts, Big Portions, Big Menu, Happy Place, Great Decor');
@@ -1132,7 +1134,7 @@ INSERT INTO lcfa_rest(id,old_id,restaurant_name,category,pricing_for_two,localit
 
 
 
--- for images table
+--Insert queries for images table
 
 
 INSERT INTO images(id,link) VALUES (0,'https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2016/09/160916_WheelchairAccessibleRestaurants_CafeLota.jpg?w=1200&h=628&fill=blur&fit=fill');
@@ -2262,7 +2264,7 @@ INSERT INTO images(id,link) VALUES (1123,'https://b.zmtcdn.com/data/pictures/9/3
 
 
 
--- for ranking table
+--Insert queries for ranking table
 
 
 INSERT INTO lcfa_ranking(id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22,score) VALUES (1,'Cafe Lota','Cafe, South Indian, North Indian, Beverages',1200,'Pragati Maidan, New Delhi',4.9,3748,'https://www.zomato.com/ncr/cafe-lota-pragati-maidan-new-delhi','Pondicherry Fish Curry, Coconut Rabdi, Sabudana Pop Corn, Chicken Pasanda, Majestic Chicken, Bhapa Doi','Artistic Decor, The Service, Natural Ambience, Fusion Menu, Serene Ambience, Fusion Food',4.691427999);
@@ -2359,17 +2361,21 @@ INSERT INTO lcfa_ranking(id,restaurant_name,category,pricing_for_two,locality,di
 INSERT INTO lcfa_ranking(id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22,score) VALUES (1376,'Prime Street Cafe','North Indian, Chinese, Italian, Pizza, Mughlai, Fast Food, Beverages',1000,'Connaught Place, New Delhi',4,1475,'https://www.zomato.com/ncr/prime-street-cafe-connaught-place-new-delhi','Chicken Momos, Pasta, Starters, Paneer Tikka, Biryani','Ample Seating Area, Good for Large Groups, Relaxed Atmosphere, Serving Size, Great Value, Theme',4.065356218);
 INSERT INTO lcfa_ranking(id,restaurant_name,category,pricing_for_two,locality,dining_rating,dining_review_count,website,known_for2,known_for22,score) VALUES (1632,'Evergreen Sweet House','Continental, South Indian, North Indian, Chinese, Street Food, Ice Cream, Beverages',500,'Green Park, New Delhi',3.9,2145,'https://www.zomato.com/ncr/evergreen-sweet-house-green-park-new-delhi','Paneer Peri Peri, Grilled Cottage Cheese Steak, Nachos N Salsa, Tequila Sunrise, Shisha, Hummus Pita','Hookahs, Rooftop Ambience, Sheesha, Outdoor Sitting, Ambience was Super Cool, Good for Large Groups',3.992549626);
 
-
+-- Inserting into lcfa table after joining images and lcfa_rest
 insert into lcfa
 SELECT lcfa_rest.id, lcfa_rest.old_id, lcfa_rest.restaurant_name, lcfa_rest.category, lcfa_rest.pricing_for_two, lcfa_rest.locality, lcfa_rest.dining_rating, lcfa_rest.dining_review_count,lcfa_rest.website, lcfa_rest.known_for2, lcfa_rest.known_for22, images.link 
 FROM lcfa_rest
 INNER JOIN images ON images.id=lcfa_rest.id;
 
+
+-- Inserting into ranking after joining images and lcfa_ranking.
 insert into ranking
 SELECT lcfa.id, lcfa.old_id, lcfa.restaurant_name, lcfa.category, lcfa.pricing_for_two, lcfa.locality, lcfa.dining_rating, lcfa.dining_review_count, lcfa.website, lcfa.known_for2, lcfa.known_for22, lcfa.link, lcfa_ranking.score 
 FROM lcfa
 INNER JOIN lcfa_ranking ON lcfa_ranking.id=lcfa.old_id;
 
+
+-- Dropping the tables whose purpose is done.
 drop table lcfa_ranking;
 drop table images;
 drop table lcfa_rest;

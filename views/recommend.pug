@@ -10,157 +10,149 @@
     <title>Recommend</title>
 </head>
 <body>
-    
-    <div class ="container-fluid navbar-style py-2">
-        <div class="row">
-            <div class="col-md-10 col-12 mx-auto">  
-                <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="/">Zayka दिल्ली Ka</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="/">Home</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex" action="/search" method="POST">
-                              <input class="form-control me-2" type="search" name="searchbox" placeholder="Search" aria-label="searchbox" required>              
-                              <button class="btn btn-outline-success" type="submit">Search</button>                           
-                            </form>
-                        </div>
-                    </div>
-                </nav>
+  <!-- Navigation Bar -->
+  <div class ="container-fluid navbar-style py-2">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Zayka दिल्ली Ka</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/">Home</a>
+                </li>
+              </ul>
+              <form class="d-flex" action="/search" method="POST">
+                <input class="form-control me-2" type="search" name="searchbox" placeholder="Search" aria-label="searchbox" required>              
+                <button class="btn btn-outline-success" type="submit">Search</button>                           
+              </form>
             </div>
-        </div>
+          </div>
+        </nav>
+      </div>
     </div>
+  </div>
 
-
-    <div class ="container-fluid py-5">
+<!-- Displaying information about the selected restaurant -->
+  <div class ="container-fluid py-5">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
         <div class="row">
-            <div class="col-md-10 col-12 mx-auto">
-
-                <div class="row">
-                    <div class="col-md-6 col-12 search-text order-md-1 order-1">
-                        <div class="row">
-                            <div class="row mb-2">
-                                <h2 class="rest-name">#{rest[0].restaurant_name}</h2>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col">
-                                    
-                                    <div class="rating">
-                                        <div class="">
-                                          
-                                          <p class="mb-3 text-center text-white">Rating: #{rest[0].dining_rating}</p>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    
-                                    <div class="count">
-                                        <div class="">
-                                          
-                                          <p class="mb-3 text-center text-white">No. of people rated: #{rest[0].dining_review_count}</p>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row align-bottom">
-                            <div class="row mt-4 text-start ms-5">                            
-                                <h3 class="fw-bolder">Address</h3>
-                                <p class="ms-5">#{rest[0].locality}</p>                                                                                    
-                            </div>
-                            <div class="row mt-3 text-start ms-5">                           
-                                <h3 class="fw-bolder">Price For 2 People</h3>
-                                <p class="text-start ms-5">Rs. #{rest[0].pricing_for_two}</p>
-                                
-                            </div>
-                            <div class="row mt-3 text-start ms-5">
-                                <h3 class="fw-bolder">Category</h3>
-                                <p class="text-start ms-5">#{rest[0].category}</p>
-                            </div>
-                        </div>
+          <div class="col-md-6 col-12 search-text order-md-1 order-1">
+            <div class="row">
+              <div class="row mb-2">
+                <h2 class="rest-name">#{rest[0].restaurant_name}</h2>
+              </div>
+              <div class="row mb-3">
+                <div class="col">                      
+                  <div class="rating">
+                    <div class="">                        
+                      <p class="mb-3 text-center text-white">Rating: #{rest[0].dining_rating}</p>                        
                     </div>
-            
-                    <div class="col-md-6 col-12 hero-text order-md-0 order-0"> 
-                        
-                        <figure>
-                            <img src="#{rest[0].link}" class="showcase" style="width: 40vw; height: 70vh; padding: 0px;" alt="image">
-                        </figure> 
-              
-                    </div>
-                </div>
-                <div class="row text-center mb-4">
-                    <p class="fw-bolder ">Order at<a href="#{rest[0].website}" target="_blank"><img src="https://pixlok.com/wp-content/uploads/2021/04/Zomato-Logo-PNG-300x300.jpg" alt="" style="width: 85px; height: 70px"></a></p>
-                </div>
-                <div class="row mb-5">
-                    <div class="speciality-card">
-                        <div class="card-body">
-                          <h5 class="card-title text-center fs-1 fw-bolder">Speciality</h5>
-                          
-                          <p class="card-text mb-3 text-center"><i>#{rest[0].known_for2}<br>#{rest[0].known_for22}</i></p>
-                          
-                        </div>
-                    </div>
-                </div>                
-            </div>
-        </div>
-    </div>
-
-
-    <div class ="container mt-4" id="cafe">
-        <div class="row">
-          <h2 class="subheaders mb-4" >RECOMMENDATIONS</h2>
-          <p class="mt-3">Here Are A Few <span class="bold-style">Recommendations</span> Based On Your Search:</p>
-        </div>
-    </div> 
-        
-    <ul class="cards">
-      for val,index in recommended_rest
-        if index < 8
-          <li>
-            <a href="/recommend/#{val.id}" class="card">
-              <img src="#{val.link}" class="card__image" alt="" />
-              <div class="card__overlay">
-                <div class="card__header">
-                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                  <img class="card__thumb" src="#{val.link}" alt="" />
-                  <div class="card__header-text">
-                    <h3 class="card__title">#{val.restaurant_name}</h3>            
-                    <span class="card__status">Rating: #{val.dining_rating}</span>
                   </div>
                 </div>
-                <p class="card__description">#{val.known_for2}</p>
+                <div class="col">                      
+                  <div class="count">
+                    <div class="">                        
+                      <p class="mb-3 text-center text-white">No. of people rated: #{rest[0].dining_review_count}</p>                        
+                    </div>
+                  </div>
+                </div>
               </div>
-            </a>      
-          </li> 
-      end
-    </ul>
+            </div>
+            <div class="row align-bottom">
+              <div class="row mt-4 text-start ms-5">                            
+                <h3 class="fw-bolder">Address</h3>
+                <p class="ms-5">#{rest[0].locality}</p>                                                                                    
+              </div>
+              <div class="row mt-3 text-start ms-5">                           
+                <h3 class="fw-bolder">Price For 2 People</h3>
+                <p class="text-start ms-5">Rs. #{rest[0].pricing_for_two}</p>                    
+              </div>
+              <div class="row mt-3 text-start ms-5">
+                <h3 class="fw-bolder">Category</h3>
+                <p class="text-start ms-5">#{rest[0].category}</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-12 hero-text order-md-0 order-0"> 
+              
+            <figure>
+              <img src="#{rest[0].link}" class="showcase" style="width: 40vw; height: 70vh; padding: 0px;" alt="image">
+            </figure> 
+    
+          </div>
+        </div>
+        <div class="row text-center mb-4">
+          <p class="fw-bolder ">Order at<a href="#{rest[0].website}" target="_blank"><img src="https://pixlok.com/wp-content/uploads/2021/04/Zomato-Logo-PNG-300x300.jpg" alt="" style="width: 85px; height: 70px"></a></p>
+        </div>
+        <div class="row mb-5">
+          <div class="speciality-card">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-1 fw-bolder">Speciality</h5>
+              
+              <p class="card-text mb-3 text-center"><i>#{rest[0].known_for2}<br>#{rest[0].known_for22}</i></p>
+              
+            </div>
+          </div>
+        </div>                
+      </div>
+    </div>
+  </div>
 
-    <footer>
+<!-- showing recommendations in the form of cards -->
+  <div class ="container mt-4" id="cafe">
+      <div class="row">
+        <h2 class="subheaders mb-4" >RECOMMENDATIONS</h2>
+        <p class="mt-3">Here Are A Few <span class="bold-style">Recommendations</span> Based On Your Search:</p>
+      </div>
+  </div> 
+        
+  <ul class="cards">
+    for val,index in recommended_rest
+      if index < 8
+        <li>
+          <a href="/recommend/#{val.id}" class="card">
+            <img src="#{val.link}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <img class="card__thumb" src="#{val.link}" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">#{val.restaurant_name}</h3>            
+                  <span class="card__status">Rating: #{val.dining_rating}</span>
+                </div>
+              </div>
+              <p class="card__description">#{val.known_for2}</p>
+            </div>
+          </a>      
+        </li> 
+    end
+  </ul>
+<!-- Footer -->
+  <footer>
     <div class="footer-content">
         <h3>Zayka दिल्ली Ka</h3>
         <p>This website is made for the purpose of recommendation of restaurants</p>
         <ul class="socials">
-        <li><a href="mailto:gyanvi2001@gmail.com"><img src="https://user-images.githubusercontent.com/88244007/170833496-1dfe6f8f-a1e0-4fcc-85f9-68aa7b52d538.png" alt=""></a></li>
-        <li><a href="https://www.linkedin.com/in/gyanvi24/"><img src="https://user-images.githubusercontent.com/88244007/170835085-ad843d00-4f9c-497c-8d5f-3c7eff9d57a4.png" alt="" class="li"></a></li>
-        <li><a href="https://github.com/24gyanvi"><img src="https://user-images.githubusercontent.com/88244007/170835025-abb4024f-100e-46b9-8fd6-beed2e085424.png" alt="" class="github"></a></li>
+          <li><a href="mailto:gyanvi2001@gmail.com"><img src="https://user-images.githubusercontent.com/88244007/170833496-1dfe6f8f-a1e0-4fcc-85f9-68aa7b52d538.png" alt=""></a></li>
+          <li><a href="https://www.linkedin.com/in/gyanvi24/"><img src="https://user-images.githubusercontent.com/88244007/170835085-ad843d00-4f9c-497c-8d5f-3c7eff9d57a4.png" alt="" class="li"></a></li>
+          <li><a href="https://github.com/24gyanvi"><img src="https://user-images.githubusercontent.com/88244007/170835025-abb4024f-100e-46b9-8fd6-beed2e085424.png" alt="" class="github"></a></li>
         </ul>          
     </div>        
     <footer class="bottom">
-        <p>Copyright &copy; 2022 Zayka दिल्ली Ka designed by <span>Gyanvi</span></p>
+      <p>Copyright &copy; 2022 Zayka दिल्ली Ka designed by <span>Gyanvi</span></p>
     </footer>
-    </footer>
+  </footer>
 
 
-    <script src="../jq/jquery.js" type="text/javascript"></script>
-    <script src="../js/bootstrap.js" type="text/javascript"></script>
-    <script src="/javascripts/script.js"></script>
+  <script src="../jq/jquery.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.js" type="text/javascript"></script>
+  <script src="/javascripts/script.js"></script>
 </body>
 </html>

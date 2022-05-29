@@ -1,8 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"); */
+/* CSS stylesheet for the website */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,200;0,300;1,100&display=swap'); */
 
 
+/* General */
 * {
   font-family: 'Lobster', cursive;
   font-weight: bold;
@@ -12,6 +12,8 @@
 
 
 * {box-sizing:border-box}
+
+
 
 .bold-style{
   color: #f93f48;

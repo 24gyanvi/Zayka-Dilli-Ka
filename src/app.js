@@ -35,7 +35,8 @@ function get_row(query){
 }
 
 // A function to get ranking wise data for displaying sorted on the basis of score calculated using 
-// 'ranking_lcfa' in models and the cafes, restaurants, romantic outings data and family outings data from the database
+// 'ranking_lcfa' in models and the cafes, restaurants, romantic outings data and family outings data from the database.
+// Also it displays cafe, restaurant, romantic and family outings required data in the same page.
 app.get('/',async function(req,res){
     let query = "SELECT * FROM `ranking` order by score desc";
     const ranks = await get_row(query);
@@ -50,6 +51,10 @@ app.get('/',async function(req,res){
     res.render("index", { ranks: ranks, cafe: cafe, rest: rest, rom: rom, fam: fam });      
 });
 
+
+// It displays the data of the selected cafe, restaurant, romantic and family outings in the same page.
+// It also gives a list of recommended cafes and restaurants after reading the ID from the json file and fetching the corresponding data 
+// from the database.
 app.get("/recommend/:id",async function(req,res){
     const id = req.params.id;
     let query = "SELECT * from lcfa WHERE id = "+id;
@@ -61,8 +66,11 @@ app.get("/recommend/:id",async function(req,res){
         recommended_rest.push(rec[0]);
     }
     res.render("recommend", { rest: rest, recommended_rest: recommended_rest });
-})
+});
 
+
+// It searches on the basis of the search query entered by the user and displays the data of the cafes and restaurants 
+// corresponding to the keyword entred by the user.
 app.get("/search/:name",async function(req,res){
     const search = req.params.name;
     let query = "SELECT * FROM `lcfa` WHERE restaurant_name LIKE '%"+search+"%' OR known_for22 LIKE '%"+search+"%' OR category LIKE '%"+search+"%'";
@@ -70,6 +78,8 @@ app.get("/search/:name",async function(req,res){
     res.render("search", { search_result: search_result });
 });
 
+
+// A post request to the server to get the data corresponding the entered keyword.
 app.post("/search", function(req,res){
     const search = req.body.searchbox;
     res.redirect("/search/"+search);
