@@ -300,7 +300,8 @@ body {
 .card {
   position: relative;
   display: block;
-  height: 100%;  
+  width: 325px;
+  height: 325px;  
   border-radius: calc(var(--curve) * 1px);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -308,8 +309,8 @@ body {
 }
 
 .card__image {      
-  width: 23vw;
-  height: 45vh;
+  width: 325px;
+  height: 325px;
 }
 
 .card__overlay {
