@@ -47,4 +47,6 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 ### Search Page showing the search results
 ![image](https://user-images.githubusercontent.com/88244007/170838394-888a5af3-61dc-4da1-9166-f5b8e319ed24.png)
 
-
+## Implementation
+* Ranking System: This system basically works on the dining rating and dining rating count, so as to get an unbiased ranking for restaurants. Consider an example of restaurant A and B, which have dining rating 5 and 4.9 with dining rating count as 5 and 50 respectively. So if we consider only rating then restaurant A would be ranked first while restaurant B is better, so therefore accomodating both the dining rating and dining rating count helps us overcome this problem.
+We have done this task using the formula given below:<br>
