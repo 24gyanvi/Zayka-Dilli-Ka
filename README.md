@@ -1,6 +1,11 @@
 # Zayka-Dilli-Ka
+
 ## About the project
-A website for exploring various eateries of Delhi. This site recommends cafes and restaurants of delhi based on real world data.
+A website for exploring various eateries of Delhi. This site recommends cafes and restaurants of delhi based on real world data. As there are 3 ways of recommendation available namely:
+* Collaborative
+* Content-based
+* Demographic
+<br>In this project, I am making use of `content-based filtering`.
 ### Salient Features
 * The front page shows eateries based on the ranking algorithm which is a combined score of both the rating and the number of people who participated in the rating so as to get an unbiased rank.
 * The front page also shows a few cafes, restaurants, romantic outings and family outings eateries based on their category and ambience sorted on the basis of its ratings.
@@ -22,6 +27,7 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 * DelhiNCR_Restaurants: From [Kaggle](https://www.kaggle.com/datasets/aestheteaman01/zomato-restaurants-in-delhi-ncr)
 * Ranking_lcfa: After calculating score based on rating and number of people who rated
 * lcfa_rest: After data preprocessing in Python
+* 
 ## Running
 1. Clone the repo and run `npm install`
 2. Create a database using zdk.sql file
@@ -40,4 +46,5 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 ![image](https://user-images.githubusercontent.com/88244007/170838255-6bb0702f-792a-4c9c-ab58-b85640394189.png)
 ### Search Page showing the search results
 ![image](https://user-images.githubusercontent.com/88244007/170838394-888a5af3-61dc-4da1-9166-f5b8e319ed24.png)
+
 
