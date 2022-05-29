@@ -29,11 +29,12 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 * lcfa_rest: After data preprocessing in Python
 
 ## Running
-1. Clone the repo and run `npm install`
-2. Create a database using zdk.sql file
-3. Create a user in Mysql with username : root and enter password in conn.js file of db folder in src folder.
-4. Run the given command `ALTER USER 'your_username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'` on your Mysql workbench.
-5. Then start the server by `npm run dev`
+1. Download Node.js and npm from [nodejs.org](https://nodejs.org/en/download/)
+2. Clone the repo and run `npm install`
+3. Create a database using zdk.sql file
+4. Create a user in Mysql with username : root and enter password in conn.js file of db folder in src folder.
+5. Run the given command `ALTER USER 'your_username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'` on your Mysql workbench.
+6. Then start the server by `npm run dev`
 
 ## Snippets
 ### Front Page showing a few top restaurants of Delhi based on rating and number of people who rated
