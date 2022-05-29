@@ -1,13 +1,13 @@
 {
-  "name": "expresstrial",
+  "name": "zayka-dilli-ka",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A machine learning based website for recommending restaurants",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,pug"
+    "dev": "node src/app.js"
   },
-  "author": "",
+  "author": "Gyanvi",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3",
