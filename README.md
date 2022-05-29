@@ -53,3 +53,6 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 We have done this task using the formula given in [Ranking Generator](https://github.com/24gyanvi/Zayka-Dilli-Ka/blob/main/models/Ranking_generator.ipynb)
 * Recommendation Engine: This system recommends restaurants on the basis of their locality, cuisines, famous food items, their ambience and their ctegory. This is done using `bag of words` and `cosine similarity`. 
 
+## Future Scope
+* To sort the recommendations list on the basis of rating/pricing for 2/ distance.
+* To add authentication to the website so that a person could get personalised choices
