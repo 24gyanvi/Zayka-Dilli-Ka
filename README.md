@@ -31,9 +31,9 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 ## Running
 1. Download Node.js and npm from [nodejs.org](https://nodejs.org/en/download/)
 2. Clone the repo and run `npm install`
-3. Execute zdk.sql file
-4. Create a user in Mysql with username : your_mysql_username and enter password in conn.js file of db folder in src folder.
-5. Run the given command `ALTER USER 'your_username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'` on your Mysql workbench.
+3. Execute zdk.sql file in mysql
+4. Create a user in Mysql with username : your_mysql_username and enter password in src/db/conn.js
+5. Run the given command `ALTER USER 'your_username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'` on your Mysql workbench so that you can connect to the database
 6. Then start the server by `npm run dev`
 7. Open the browser and go to http://localhost:3000/
 
