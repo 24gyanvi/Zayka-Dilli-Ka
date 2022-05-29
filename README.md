@@ -49,6 +49,6 @@ Laptops, desktops, Tablet PCs and Mobile Phones
 
 ## Implementation
 * Ranking System: This system basically works on the dining rating and dining rating count, so as to get an unbiased ranking for restaurants. Consider an example of restaurant A and B, which have dining rating 5 and 4.9 with dining rating count as 5 and 50 respectively. So if we consider only rating then restaurant A would be ranked first while restaurant B is better, so therefore accomodating both the dining rating and dining rating count helps us overcome this problem.
-We have done this task using the formula given below:<br>
+We have done this task using the formula given in [Ranking Generator](https://github.com/24gyanvi/Zayka-Dilli-Ka/blob/main/models/Ranking_generator.ipynb)
 * Recommendation Engine: This system recommends restaurants on the basis of their locality, cuisines, famous food items, their ambience and their ctegory. This is done using `bag of words` and `cosine similarity`. 
 
