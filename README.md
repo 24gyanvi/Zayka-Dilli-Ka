@@ -1,7 +1,7 @@
 # Zayka-Dilli-Ka
 
 ## About the project
-A website for exploring various eateries of Delhi. This site recommends cafes and restaurants of delhi based on real world data. As there are 3 ways of recommendation available namely:
+A machine learning based website for exploring various eateries of Delhi. This site recommends cafes and restaurants of delhi based on real world data. As there are 3 ways of recommendation available namely:
 * Collaborative
 * Content-based
 * Demographic
